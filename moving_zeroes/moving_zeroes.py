@@ -3,19 +3,18 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # If empty
-    if len(arr) <= 1:
-        return arr
-    
+    count = 0
     # Loop over arr
-    for i in range(0, len(arr) - 1):
+    for i in range(0, len(arr) ):
     # If current value is 0, .append the popped val
-        if arr[i] == 0:
-            popped = arr.pop(i)
-            arr.append(popped)
-            print('\n')
-            print(popped)
-        
+        if arr[i] != 0:
+            # count is incrememnted
+            arr[count] = arr[i]
+            count += 1
+    # now add 0s to the end
+    while count < len(arr):
+        arr[count] = 0
+        count += 1
         
     # after loop, return arr
     print(arr)
