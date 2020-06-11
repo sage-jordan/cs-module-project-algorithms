@@ -10,7 +10,7 @@ def product_of_all_other_numbers(arr):
         new_arr[1] = arr[0]
 
     for i in range(0, len(arr)):
-        x = 0
+        x = 1 # I was trying to initiate the number with 0, but anything multiplied by 0 = 0
         for j in range(0, len(arr) ):
             if j == i:
                 pass
