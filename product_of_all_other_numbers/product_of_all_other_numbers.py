@@ -3,9 +3,23 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    new_arr = [0] * len(arr)
 
-    pass
+    if len(arr) == 2:
+        new_arr[0] = arr[1]
+        new_arr[1] = arr[0]
+
+    for i in range(0, len(arr)):
+        x = 0
+        for j in range(0, len(arr) ):
+            if j == i:
+                pass
+            else:
+                x *= arr[j]
+
+        new_arr[i] = x
+
+    return new_arr
 
 
 if __name__ == '__main__':
